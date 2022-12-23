@@ -6,7 +6,7 @@ form.addEventListener('submit', (e) => {
 
   const url = document.getElementById('url').value;
 
-  fetch(url)
+  fetch(url, { mode: 'cors' })
     .then((res) => res.text())
     .then((html) => {
       const parser = new DOMParser();
